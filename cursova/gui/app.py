@@ -10,10 +10,10 @@ import csv
 import numpy as np
 from pathlib import Path
 
-from cursova.core.scales import ScaleTransformer
-from cursova.core.pcm import PairwiseComparisonMatrix
-from cursova.core.consistency import ConsistencyChecker
-from cursova.core.ranking import RankingCalculator
+from ..core.scales import ScaleTransformer
+from ..core.pcm import PairwiseComparisonMatrix
+from ..core.consistency import ConsistencyChecker
+from ..core.ranking import RankingCalculator
 
 
 class ExpertComparisonApp:

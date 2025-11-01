@@ -4,17 +4,29 @@
 
 ### Крок 1: Встановіть залежності
 ```bash
-cd /home/user/cur/cursova
-pip install -r requirements.txt
+cd C:\Users\Acer\Desktop\cur
+pip install numpy scipy
 ```
 
 ### Крок 2: Запустіть програму
-```bash
-# Варіант 1 (рекомендовано):
-python -m gui.app
 
-# Варіант 2 (альтернативний):
-python main.py
+**Windows (найпростіший спосіб):**
+```powershell
+cd C:\Users\Acer\Desktop\cur
+# Подвійний клік на run_app.bat або запустіть:
+run_app.bat
+```
+
+**Або через Python (універсальний спосіб):**
+```powershell
+cd C:\Users\Acer\Desktop\cur
+python run_app.py
+```
+
+**Або через модуль:**
+```powershell
+cd C:\Users\Acer\Desktop\cur
+python -m cursova.main
 ```
 
 ### Крок 3: Використовуйте інтерфейс
@@ -63,15 +75,23 @@ sudo dnf install python3-tkinter
 
 ## Приклад використання
 
-```bash
-# Перейти до директорії
-cd /home/user/cur/cursova
+```powershell
+# Windows PowerShell:
+
+# Перейти до БАТЬКІВСЬКОЇ директорії
+cd C:\Users\Acer\Desktop\cur
 
 # Встановити залежності
 pip install numpy scipy
 
-# Запустити
-python -m gui.app
+# Запустити (НАЙПРОСТІШИЙ спосіб):
+run_app.bat
+
+# АБО через Python:
+python run_app.py
+
+# АБО через модуль:
+python -m cursova.main
 ```
 
 ---
@@ -104,14 +124,18 @@ pip install numpy scipy
 ```
 
 ### Проблема: "No module named 'cursova'"
-**Рішення**: Запускайте з правильної директорії:
-```bash
-cd /home/user/cur/cursova
-python -m gui.app
+**Рішення**: Запускайте з БАТЬКІВСЬКОЇ директорії (не з середини cursova):
+
+**ПРАВИЛЬНО ✅:**
+```powershell
+cd C:\Users\Acer\Desktop\cur
+python run_app.py
+# або
+python -m cursova.main
 ```
 
-Або з батьківської директорії:
-```bash
-cd /home/user/cur
-python -m cursova.gui.app
+**НЕПРАВИЛЬНО ❌:**
+```powershell
+cd C:\Users\Acer\Desktop\cur\cursova
+python main.py  # ← НЕ ПРАЦЮЄ!
 ```
